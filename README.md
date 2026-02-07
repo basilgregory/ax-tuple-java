@@ -65,6 +65,8 @@ System.out.println(user.toString());
 
 ## Using as HashMap Keys
 
+### Using Tuple as a key
+
 Both `Tuple` and `NamedTuple` override `equals()` and `hashCode()`, making them perfectly suitable for use as keys in a `HashMap` or as elements in a `HashSet`.
 
 Two tuples are considered equal if they contain the same elements in the same order. Two named tuples are equal if they contain the same key-value pairs.
@@ -80,6 +82,24 @@ cache.put(key, "Cached Result");
 
 // Retrievable with a different Tuple instance containing identical data
 System.out.println(cache.get(Tuple.of("request", 12345))); // Output: Cached Result
+```
+
+### Using NamedTuple as a key
+
+```java
+import java.util.HashMap;
+import com.appxiom.ax.tuple.NamedTuple;
+import java.util.Map;
+
+// Using NamedTuple as a key
+HashMap<NamedTuple, String> userRegistry = new HashMap<>();
+NamedTuple key1 = NamedTuple.of(Map.of("id", 101, "role", "admin"));
+
+userRegistry.put(key1, "Admin Account");
+
+// Retrieve using a new instance with identical keys and values
+NamedTuple key2 = NamedTuple.of(Map.of("id", 101, "role", "admin"));
+System.out.println(userRegistry.get(key2)); // Output: Admin Account
 ```
 
 ## License
