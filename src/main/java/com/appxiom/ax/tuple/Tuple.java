@@ -2,7 +2,7 @@
  * A simple immutable Tuple implementation for Java that can hold an arbitrary number of elements.
  * 
  * @author Robin Panicker
- * @version 1.0.3
+ * @version 1.0.4
  * @since 0.1.0
  */
 package com.appxiom.ax.tuple;

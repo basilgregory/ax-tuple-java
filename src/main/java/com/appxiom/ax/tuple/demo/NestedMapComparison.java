@@ -1,7 +1,7 @@
 /**
  * @author Robin Panicker
- * @version 1.0.0
- * @since 0.1.0
+ * @version 1.0.4
+ * @since 1.0.4
  */
 package com.appxiom.ax.tuple.demo;
 
