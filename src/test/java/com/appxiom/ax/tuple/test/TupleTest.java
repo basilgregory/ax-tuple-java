@@ -109,4 +109,27 @@ public class TupleTest {
         assertEquals(t1.hashCode(), t2.hashCode());
         assertNotEquals(t1.hashCode(), t3.hashCode());
     }
+
+    /**
+     * Tests the usage of Tuple as a key in a HashMap.
+     */
+    @Test
+    public void testHashMapUsage() {
+        java.util.HashMap<Tuple, String> map = new java.util.HashMap<>();
+        Tuple key1 = Tuple.of("a", 1);
+        Tuple key2 = Tuple.of("a", 1);
+        Tuple key3 = Tuple.of("b", 2);
+
+        map.put(key1, "value1");
+
+        assertTrue(map.containsKey(key1));
+        assertTrue(map.containsKey(key2)); // Different object, same content
+        assertEquals("value1", map.get(key2));
+
+        map.put(key2, "value2");
+        assertEquals(1, map.size());
+        assertEquals("value2", map.get(key1));
+
+        assertFalse(map.containsKey(key3));
+    }
 }

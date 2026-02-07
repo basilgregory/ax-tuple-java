@@ -96,4 +96,27 @@ public class NamedTupleTest {
         assertEquals(nt1.hashCode(), nt2.hashCode());
         assertNotEquals(nt1.hashCode(), nt3.hashCode());
     }
+
+    /**
+     * Tests the usage of NamedTuple as a key in a HashMap.
+     */
+    @Test
+    public void testHashMapUsage() {
+        java.util.HashMap<NamedTuple, String> map = new java.util.HashMap<>();
+        NamedTuple key1 = NamedTuple.of(Map.of("id", 1));
+        NamedTuple key2 = NamedTuple.of(Map.of("id", 1));
+        NamedTuple key3 = NamedTuple.of(Map.of("id", 2));
+
+        map.put(key1, "value1");
+
+        assertTrue(map.containsKey(key1));
+        assertTrue(map.containsKey(key2)); // Different object, same content
+        assertEquals("value1", map.get(key2));
+
+        map.put(key2, "value2");
+        assertEquals(1, map.size());
+        assertEquals("value2", map.get(key1));
+
+        assertFalse(map.containsKey(key3));
+    }
 }
