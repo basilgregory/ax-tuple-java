@@ -2,6 +2,12 @@
 
 A simple, lightweight, and immutable Tuple implementation for Java projects.
 
+> **ax-tuple-java** is an **Open Source Project** built by **Appxiom Team**
+> Visit [https://www.appxiom.com](https://www.appxiom.com) to know more about us.
+> You will love our product if you are into software engineering!
+
+> MIT License
+
 ## Overview
 
 `ax-tuple-java` provides two main classes to manage collections of data without the need for custom DTOs or POJOs for every small data structure:
@@ -19,7 +25,7 @@ Add the following dependency to your `pom.xml`:
 <dependency>
     <groupId>com.appxiom.ax.tuple</groupId>
     <artifactId>ax-tuple</artifactId>
-    <version>0.1.1</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
