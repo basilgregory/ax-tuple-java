@@ -10,6 +10,9 @@ import java.util.Arrays;
 
 /**
  * Unit tests for the Tuple class.
+ * 
+ * @version 0.1.1
+ * @since 0.1.0
  */
 public class TupleTest {
 

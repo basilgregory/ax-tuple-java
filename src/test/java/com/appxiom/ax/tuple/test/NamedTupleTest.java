@@ -10,6 +10,9 @@ import java.util.Map;
 
 /**
  * Unit tests for the NamedTuple class.
+ * 
+ * @version 0.1.1
+ * @since 0.1.0
  */
 public class NamedTupleTest {
 
