@@ -14,7 +14,7 @@ import java.util.Objects;
 /**
  * Represents a tuple where each element is associated with a specific name
  */
-public class NamedTuple {
+public final class NamedTuple {
 
     /**
      * The internal map storing the named elements of the tuple.
