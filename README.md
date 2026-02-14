@@ -19,6 +19,8 @@ Both implementations are designed to be immutable and provide type-safe access t
 
 ## Installation
 
+### Maven
+
 Add the following dependency to your `pom.xml`:
 
 ```xml
@@ -27,6 +29,24 @@ Add the following dependency to your `pom.xml`:
     <artifactId>ax-tuple</artifactId>
     <version>1.0.8</version>
 </dependency>
+```
+
+### Gradle
+
+Add the following dependency to your `build.gradle`:
+
+```gradle
+dependencies {
+    implementation 'com.appxiom.ax:ax-tuple:1.0.8'
+}
+```
+
+Or in `build.gradle.kts`:
+
+```kotlin
+dependencies {
+    implementation("com.appxiom.ax:ax-tuple:1.0.8")
+}
 ```
 
 ## Usage
