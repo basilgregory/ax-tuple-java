@@ -53,6 +53,8 @@ dependencies {
 
 ### Using `Tuple`
 
+#### Java
+
 Create a tuple with `Tuple.of()`:
 
 ```java
@@ -68,7 +70,24 @@ Object o = tuple.getObject(2);
 System.out.println("Size: " + tuple.size()); // Size: 3
 ```
 
+#### Kotlin
+
+```kotlin
+import com.appxiom.ax.tuple.Tuple
+
+val tuple = Tuple.of("Hello", 42, 3.14)
+
+// Access by index
+val s = tuple.get(0)                    // Inferred type
+val i = tuple.get(1, Integer::class.java) // Explicit type
+val o = tuple.getObject(2)
+
+println("Size: ${tuple.size()}") // Size: 3
+```
+
 ### Using `NamedTuple`
+
+#### Java
 
 Create a named tuple from a `Map`:
 
@@ -89,9 +108,29 @@ Boolean isActive = user.get("active", Boolean.class);
 System.out.println(user.toString());
 ```
 
+#### Kotlin
+
+```kotlin
+import com.appxiom.ax.tuple.NamedTuple
+
+val user = NamedTuple.of(mapOf(
+    "id" to 1,
+    "username" to "robin",
+    "active" to true
+))
+
+// Access by key
+val username = user.get("username")
+val isActive = user.get("active", Boolean::class.java)
+
+println(user.toString())
+```
+
 ## Using as HashMap Keys
 
 ### Using Tuple as a key
+
+#### Java
 
 Both `Tuple` and `NamedTuple` override `equals()` and `hashCode()`, making them perfectly suitable for use as keys in a `HashMap` or as elements in a `HashSet`.
 
@@ -110,7 +149,23 @@ cache.put(key, "Cached Result");
 System.out.println(cache.get(Tuple.of("request", 12345))); // Output: Cached Result
 ```
 
+#### Kotlin
+
+```kotlin
+import com.appxiom.ax.tuple.Tuple
+
+val cache = mutableMapOf<Tuple, String>()
+val key = Tuple.of("request", 12345)
+
+cache[key] = "Cached Result"
+
+// Retrievable with a different Tuple instance containing identical data
+println(cache[Tuple.of("request", 12345)]) // Output: Cached Result
+```
+
 ### Using NamedTuple as a key
+
+#### Java
 
 ```java
 import java.util.HashMap;
@@ -126,6 +181,22 @@ userRegistry.put(key1, "Admin Account");
 // Retrieve using a new instance with identical keys and values
 NamedTuple key2 = NamedTuple.of(Map.of("id", 101, "role", "admin"));
 System.out.println(userRegistry.get(key2)); // Output: Admin Account
+```
+
+#### Kotlin
+
+```kotlin
+import com.appxiom.ax.tuple.NamedTuple
+
+// Using NamedTuple as a key
+val userRegistry = mutableMapOf<NamedTuple, String>()
+val key1 = NamedTuple.of(mapOf("id" to 101, "role" to "admin"))
+
+userRegistry[key1] = "Admin Account"
+
+// Retrieve using a new instance with identical keys and values
+val key2 = NamedTuple.of(mapOf("id" to 101, "role" to "admin"))
+println(userRegistry[key2]) // Output: Admin Account
 ```
 
 ## License
