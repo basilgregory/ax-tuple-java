@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * Unit tests for the NamedTuple class.
  * 
- * @version 1.0.7
+ * @version 1.0.8
  * @since 0.1.0
  */
 public class NamedTupleTest {
