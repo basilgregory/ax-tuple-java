@@ -23,7 +23,7 @@ Add the following dependency to your `pom.xml`:
 
 ```xml
 <dependency>
-    <groupId>com.appxiom.ax.tuple</groupId>
+    <groupId>com.appxiom.ax</groupId>
     <artifactId>ax-tuple</artifactId>
     <version>1.0.6</version>
 </dependency>
