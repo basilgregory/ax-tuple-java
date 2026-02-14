@@ -11,7 +11,7 @@ import java.util.Arrays;
 /**
  * Unit tests for the Tuple class.
  * 
- * @version 1.0.4
+ * @version 1.0.5
  * @since 0.1.0
  */
 public class TupleTest {

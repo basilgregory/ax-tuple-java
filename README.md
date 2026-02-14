@@ -25,7 +25,7 @@ Add the following dependency to your `pom.xml`:
 <dependency>
     <groupId>com.appxiom.ax.tuple</groupId>
     <artifactId>ax-tuple</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
 </dependency>
 ```
 
