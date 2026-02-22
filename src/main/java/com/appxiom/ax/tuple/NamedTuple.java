@@ -2,7 +2,7 @@
  * A named tuple implementation for Java that stores elements as key-value pairs using a Map.
  * 
  * @author Robin Panicker
- * @version 1.0.8
+ * @version 1.0.9
  * @since 0.1.0
  * 
  */

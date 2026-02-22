@@ -27,7 +27,7 @@ Add the following dependency to your `pom.xml`:
 <dependency>
     <groupId>com.appxiom.ax</groupId>
     <artifactId>ax-tuple</artifactId>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
 </dependency>
 ```
 
@@ -37,7 +37,7 @@ Add the following dependency to your `build.gradle`:
 
 ```gradle
 dependencies {
-    implementation 'com.appxiom.ax:ax-tuple:1.0.8'
+    implementation 'com.appxiom.ax:ax-tuple:1.0.9'
 }
 ```
 
@@ -45,7 +45,7 @@ Or in `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("com.appxiom.ax:ax-tuple:1.0.8")
+    implementation("com.appxiom.ax:ax-tuple:1.0.9")
 }
 ```
 
