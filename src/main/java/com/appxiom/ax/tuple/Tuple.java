@@ -7,12 +7,15 @@
  */
 package com.appxiom.ax.tuple;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
  * Represents an immutable sequence of elements.
  */
-public final class Tuple {
+public final class Tuple implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     /**
      * The internal array of elements stored in the tuple.

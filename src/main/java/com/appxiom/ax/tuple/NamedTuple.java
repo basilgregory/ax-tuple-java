@@ -8,13 +8,16 @@
  */
 package com.appxiom.ax.tuple;
 
+import java.io.Serializable;
 import java.util.Map;
 import java.util.Objects;
 
 /**
  * Represents a tuple where each element is associated with a specific name
  */
-public final class NamedTuple {
+public final class NamedTuple implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     /**
      * The internal map storing the named elements of the tuple.
